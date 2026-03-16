@@ -1,0 +1,12 @@
+I = imread('lena.png');
+h1 = histogram(I);
+H1 = cumttist(h1);
+J = eqHist(H1,I);
+h2 = histogram(J);
+H2 = cumttist(h2);
+subplot(3,2,1); imshow(I); hold on;
+subplot(3,2,2); bar(J); hold on;
+subplot(3,2,3); bar(h1); hold on;
+subplot(3,2,4); bar(h2); hold on;
+subplot(3,2,5); bar(H1); hold on;
+subplot(3,2,6); bar(H2);
