@@ -1,4 +1,7 @@
 img = imread('camerman.jpg');
+if length(size(I))==3
+  I=rgb2gray(I);
+end
 
 [M,N] = size(img);
 
